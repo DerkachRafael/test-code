@@ -34,25 +34,25 @@
 				<![endif]-->
 				<!-- FORM -->
 				<div class="container">
-					<div class="row form-wrap">
-						<div class="main-login">
-							<h3 class="title-form text-center text-uppercase">Sign up</h3>
-							<form class="" method="post" action="#">
+					<div class="row formWrap">
+						<div class="mainLogin">
+							<h3 class="titleForm text-center text-uppercase">Sign up</h3>
+							<form class="loginForm" method="post" action="#">
 								<div class="form-group">
 									<label for="name" class="cols-sm-2 control-label">Your Name</label>
 									<div class="cols-sm-10">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-											<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+											<input type="text" class="form-control validField" name="name" id="name"  placeholder="Enter your Name"/>
 										</div>
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="name" class="cols-sm-2 control-label">Your second name</label>
+									<label for="secondName" class="cols-sm-2 control-label">Your second name</label>
 									<div class="cols-sm-10">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-											<input type="text" class="form-control" name="secondName" id="name"  placeholder="Enter your Second Name"/>
+											<input type="text" class="form-control validField" name="secondName" id="secondName"  placeholder="Enter your Second Name"/>
 										</div>
 									</div>
 								</div>
@@ -61,7 +61,7 @@
 									<div class="cols-sm-10">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-											<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+											<input type="text" class="form-control validField" name="email" id="email"  placeholder="Enter your Email"/>
 										</div>
 									</div>
 								</div>
@@ -69,10 +69,10 @@
 									<label for="gender" class="cols-sm-2 control-label">Your gender</label>
 									<div class="cols-sm-10">
 										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-male fa-lg" aria-hidden="true"></i></span>
-											<select class="form-control gender-select" id="gender">
-												<option data-gender="male">Male</option>
-												<option data-gender="female">Female</option>
+											<span class="input-group-addon"><i class="fa fa-male fa-lg icon" aria-hidden="true"></i></span>
+											<select class="form-control genderSelect validField" id="gender" name="gender">
+												<option value="male">Male</option>
+												<option value="female">Female</option>
 											</select>
 										</div>
 									</div>
@@ -82,18 +82,19 @@
 									<div class="cols-sm-10">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-											<input type="password" class="form-control js-password" name="password" id="password"  placeholder="Enter your Password" autocomplete="off"/>
+											<input type="password" class="form-control jsPassword validField" name="password" id="password"  placeholder="Enter your Password" autocomplete="off"/>
 											<div class="option">
-												<input class="option__input js-password-toggle" id="toggle-pas" type="checkbox"/>
-												<label class="option__label js-password-txt" for="toggle-pas">Show</label>
+												<input class="option__input jsPasswordToggle" id="togglePas" type="checkbox"/>
+												<label class="option__label jsPasswordTxt" for="togglePas">Show</label>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="form-group ">
-								    <label><input type="checkbox" name="terms"> I agree with the <a class="terms-link" href="#">Terms and Conditions</a>.</label>
-
-									<button type="button" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+								<div class="form-group">
+									<input class="validField" type="checkbox" name="terms"> <label> I agree with the <a class="termsLink" href="#">Terms and Conditions</a> .</label>
+								</div>
+								<div class="form-group">
+									<button type="sumbit" class="btn btn-primary btn-lg btn-block loginButton">Register</button>
 								</div>
 
 							</form>
@@ -110,11 +111,12 @@
 	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
 	<script src="libs/respond/respond.min.js"></script>
 	<![endif]-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="js/script.js"></script>
+<!-- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+-->	<script src="js/libs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
 	<script>
 	(function(b, o, i, l, e, r) {

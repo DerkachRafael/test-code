@@ -19,10 +19,9 @@ input::-webkit-input-placeholder {
   padding: 8px 12px; }
 
 .input-group {
-  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21);
-          box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21); }
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.21); }
 
-.main-login {
+.mainLogin {
   margin-top: 30px;
   margin: 0 auto;
   max-width: 400px;
@@ -30,21 +29,25 @@ input::-webkit-input-placeholder {
   background: #009edf;
   color: #FFF;
   text-shadow: none;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.31);
-          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.31); }
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.31); }
 
 span.input-group-addon i {
   color: #009edf;
   font-size: 17px; }
 
-.gender-select {
-  -webkit-border-radius: 0 5px;
-          border-radius: 0 5px; }
+.genderSelect {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0 4px 4px 0;
+  background: url(../img/down-arrow.svg) right center #fff no-repeat;
+  background-size: 30px 20px; }
 
-.js-password {
+.jsPassword {
   padding-right: 50px; }
 
-.js-password-txt {
+.jsPasswordTxt {
   position: absolute;
   right: 5px;
   top: 7px;
@@ -58,29 +61,33 @@ span.input-group-addon i {
   z-index: -1;
   opacity: 0; }
 
-.login-button {
+.loginButton {
   border: 1px solid #ccc;
   margin-top: 28px;
   padding: 6px 12px;
   color: #666;
   cursor: pointer;
-  -webkit-border-radius: 3px 3px;
-          border-radius: 3px 3px;
-  -webkit-box-shadow: 0 1px #fff inset, 0 1px #ddd;
-          box-shadow: 0 1px #fff inset, 0 1px #ddd;
+  border-radius: 3px 3px;
+  box-shadow: 0 1px #fff inset, 0 1px #ddd;
   background: #f5f5f5;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#eeeeee));
-  background: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
   background: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
-  -webkit-transition: .1s;
   transition: .1s; }
-  .login-button:hover {
+  .loginButton:hover {
     background: #e83f3d;
     color: #fff; }
 
-.terms-link {
+.termsLink {
   color: #000; }
 
-.login-register {
-  font-size: 11px;
-  text-align: center; }
+.loginForm .tooltip-inner {
+  white-space: pre; }
+
+.confirmBlock {
+  position: absolute;
+  transform: translate(50%, -50%);
+  top: 50%;
+  display: none;
+  width: 200px;
+  padding: 15px;
+  background-color: #eee;
+  margin: auto; }
