@@ -1,0 +1,14 @@
+body {
+  background-color: #eee;
+  font-family: cursive; }
+
+.wrap {
+  margin-top: 20px; }
+
+.totalCompanies {
+  font-size: 50px; }
+
+.listCompany {
+  max-height: 500px;
+  padding: 10px;
+  overflow: auto; }
