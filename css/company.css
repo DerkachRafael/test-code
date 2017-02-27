@@ -1,14 +1,22 @@
 body {
-  background-color: #eee;
-  font-family: cursive; }
+  background-color: #eee; }
 
 .wrap {
   margin-top: 20px; }
 
 .totalCompanies {
-  font-size: 50px; }
+  font-size: 50px;
+  font-family: cursive; }
 
 .listCompany {
-  max-height: 500px;
+  max-height: 300px;
+  border: 1px solid #000;
+  text-align: center;
   padding: 10px;
   overflow: auto; }
+
+.nameCompany {
+  font-size: 20px; }
+
+.activeName {
+  background-color: #b71c1c; }
