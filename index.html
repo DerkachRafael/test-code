@@ -7,27 +7,28 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Заголовок</title>
+	<title>LogIn</title>
 	<meta name="description" content="">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="shortcut icon" href="img/favicon/icon48.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/icon57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/icon72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/icon114.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="libs/animate/animate-min.css">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-	<link rel="stylesheet" href="css/fonts.css">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
-	<script src="libs/modernizr/modernizr.js"></script>
 </head>
-
 <body>
 	<!--[if lt IE 8]>
 				<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -52,7 +53,7 @@
 									<div class="cols-sm-10">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-											<input type="text" class="form-control validField" name="secondName" id="secondName"  placeholder="Enter your Second Name"/>
+											<input type="text" class="form-control validField" name="secondName" id="secondName"  placeholder="Enter your Second Name" required/>
 										</div>
 									</div>
 								</div>
@@ -61,7 +62,7 @@
 									<div class="cols-sm-10">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-											<input type="text" class="form-control validField" name="email" id="email"  placeholder="Enter your Email"/>
+											<input type="text" class="form-control validField" name="email" id="email"  placeholder="Enter your Email" required/>
 										</div>
 									</div>
 								</div>
@@ -82,7 +83,7 @@
 									<div class="cols-sm-10">
 										<div class="input-group">
 											<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-											<input type="password" class="form-control jsPassword validField" name="password" id="password"  placeholder="Enter your Password" autocomplete="off"/>
+											<input type="password" class="form-control jsPassword validField" name="password" id="password"  placeholder="Enter your Password" autocomplete="off"/ required>
 											<div class="option">
 												<input class="option__input jsPasswordToggle" id="togglePas" type="checkbox"/>
 												<label class="option__label jsPasswordTxt" for="togglePas">Show</label>
@@ -91,7 +92,7 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<input class="validField" type="checkbox" name="terms"> <label> I agree with the <a class="termsLink" href="#">Terms and Conditions</a> .</label>
+									<input class="validField" type="checkbox" name="terms" required> <label> I agree with the <a class="termsLink" href="#">Terms and Conditions</a> .</label>
 								</div>
 								<div class="form-group">
 									<button type="sumbit" class="btn btn-primary btn-lg btn-block loginButton">Register</button>
@@ -102,8 +103,24 @@
 					</div>
 				</div>
 				<!--pre-loader-->
-				<div class="loader">
-					<div class="loader_inner"></div>
+				<div class="loaderPage">
+					<h1 class="titleLoading">Loading in progress...</h1>
+					<div id="cooking">
+						<div class="bubble"></div>
+						<div class="bubble"></div>
+						<div class="bubble"></div>
+						<div class="bubble"></div>
+						<div class="bubble"></div>
+						<div id="area">
+							<div id="sides">
+								<div id="pan"></div>
+								<div id="handle"></div>
+							</div>
+							<div id="pancake">
+								<div id="pastry"></div>
+							</div>
+						</div>
+					</div>	
 				</div>
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>

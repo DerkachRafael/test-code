@@ -1,7 +1,5 @@
 function TotalCompany(){
 	this.getXHR();
-	// s
-	
 }
 TotalCompany.prototype = Object.create(App.prototype);
 
@@ -10,46 +8,36 @@ TotalCompany.prototype.getXHR = function(){
 }
 TotalCompany.prototype.resultXHR = function(obj){
 	var data = JSON.parse(obj);
-		console.log(data);
+	console.log(data);
 		totalStr = data.list.length;
-		console.log(totalStr);
 		contentTotalCompany = document.querySelector(".contentTotalCompany"),
 		listTemplate = document.querySelector("#listTemplate").innerHTML,
 		compiledTemplate = Handlebars.compile(listTemplate),
 		generateHTML = compiledTemplate(data);
-		containerList = document.querySelector(".listCompany"),
+		containerList = document.querySelector(".companyNameList"),
 		containerList.innerHTML = generateHTML;
-		console.log(compiledTemplate);
-		console.log(generateHTML);
-		contentTotalCompany.innerHTML = totalStr;
-		console.log(contentTotalCompany);
-		this.nameCompany = document.querySelector(".nameCompany");
-		console.log(this.nameCompany);
-		for(var i = 0; i < this.nameCompany.length; i++){ 
-			console.log("for+");
-		this.nameCompany[i].addEventListener("click", this.activateItem.bind(this));
+		contentTotalCompany.innerHTML = totalStr;	
+		this.getPartners(data);
+		// this.getLocation(data);
+}
+// TotalCompany.prototype.test = function(data){
+// 	var name = data.list;
+// 	console.log(name);
+// }
+
+TotalCompany.prototype.getPartners = function(data){
+		listTemplate = document.querySelector("#partnersTemplate").innerHTML,
+		compiledTemplate = Handlebars.compile(listTemplate),
+		generateHTML = compiledTemplate(data),
+		containerList = document.querySelector(".rowContentCompany"),
+		containerList.innerHTML = generateHTML;
 	}
-}
-TotalCompany.prototype.clickHandler = function(){
-	
-}
-TotalCompany.prototype.activateItem = function(){
-	console.log("click+");
-	console.log(this);
-	$(this).addClass("activeName");
-}
 
-// var nameCompany = document.querySelectorAll(".nameCompany").length;
-// console.log(nameCompany);
-// for(var i = 0; i < nameCompany.length; i++){ 
-// 	nameCompany[i].addEventListener("click", activeCompany);
+	// Get LocationList func
+// TotalCompany.prototype.getLocation = function(data){
+// 		listTemplate = document.querySelector("#locationTemplate").innerHTML,
+// 		compiledTemplate = Handlebars.compile(listTemplate),
+// 		generateHTML = compiledTemplate(a);
+// 		containerList = document.querySelector(".rowContentCompany"),
+// 		containerList.innerHTML = generateHTML;
 // }
-// function activeCompany(){
-// 	this.classList.add("activeName");
-// }
-
-
-
-
-
-
